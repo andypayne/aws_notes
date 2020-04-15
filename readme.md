@@ -4,6 +4,7 @@
   * [Saving dashboard widgets](#saving-dashboard-widgets)
   * [Filter for errors](#filter-for-errors)
   * [A quick intrusion evidence filter](#a-quick-intrusion-evidence-filter)
+  * [Extracting info from logs](#extracting-info-from-logs)
 
 <TOC>
 
@@ -41,5 +42,19 @@ fields @timestamp, @message
 | filter @message like /(?i)(\/etc\/passwd)|(\<script\>alert)/
 | sort @timestamp desc
 | stats count() by bin(60s)
+```
+
+
+### Extracting info from logs
+
+An example of extracting version reporting from the logs:
+
+```
+fields @timestamp
+| filter @message like /version =/
+| parse @message /userid \= (?<@userid>[^&]+)/
+| parse @message /version = (?<@version>.*)/
+| sort @timestamp desc
+| limit 200
 ```
 
