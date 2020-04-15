@@ -2,6 +2,7 @@
 
 - [CloudWatch](#cloudwatch)
   * [Saving dashboard widgets](#saving-dashboard-widgets)
+  * [Filter for errors](#filter-for-errors)
   * [A quick intrusion evidence filter](#a-quick-intrusion-evidence-filter)
 
 <TOC>
@@ -19,6 +20,16 @@ write it again.
 
 So remember to save the dashboard when you add a widget. I assume this will be
 fixed in a future version of CloudWatch.
+
+
+### Filter for errors
+
+```
+fields @timestamp, @message
+| filter @message like
+/(?i)Error|Reject|Unhandled|Exception|Fail|Unresolve|Caught/
+| sort @timestamp desc
+```
 
 
 ### A quick intrusion evidence filter
