@@ -34,7 +34,7 @@ fields @timestamp, @message
 
 ### A quick intrusion evidence filter
 
-[This gist](https://gist.github.com/andypayne/4141556e36ef833ff80d740bd9786236.js") shows a quick way:
+[This gist](https://gist.github.com/andypayne/4141556e36ef833ff80d740bd9786236) shows a quick way:
 
 ```
 fields @timestamp, @message
