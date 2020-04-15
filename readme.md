@@ -27,8 +27,7 @@ fixed in a future version of CloudWatch.
 
 ```
 fields @timestamp, @message
-| filter @message like
-/(?i)Error|Reject|Unhandled|Exception|Fail|Unresolve|Caught/
+| filter @message like /(?i)Error|Reject|Unhandled|Exception|Fail|Unresolve|Caught/
 | sort @timestamp desc
 ```
 
