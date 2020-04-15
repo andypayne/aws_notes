@@ -1,0 +1,26 @@
+{
+  "name": "aws_notes",
+  "version": "1.0.0",
+  "description": "Notes on using Amazon Web Services",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andypayne/aws_notes.git"
+  },
+  "keywords": [
+    "AWS",
+    "DevOps"
+  ],
+  "author": "Andy Payne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andypayne/aws_notes/issues"
+  },
+  "homepage": "https://github.com/andypayne/aws_notes#readme",
+  "dependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}
